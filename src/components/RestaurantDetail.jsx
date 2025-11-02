@@ -152,6 +152,7 @@ const RestaurantDetail = () => {
                                 src={restaurant.imageUrl} 
                                 alt={restaurant.name} 
                                 className="w-full h-full object-cover"
+                                loading="eager"
                                 crossOrigin="anonymous" 
                                 onError={(e) => e.target.src = 'https://via.placeholder.com/400'}
                             />

@@ -20,6 +20,7 @@ const RestaurantCard = ({ restaurant, navigate }) => (
             src={restaurant.imageUrl} 
             alt={restaurant.name} 
             className="w-20 h-20 object-cover rounded-xl mr-4"
+            loading="lazy"
             onError={(e) => e.target.src = 'https://via.placeholder.com/80'}
         />
         <div className="flex-1">
@@ -42,7 +43,7 @@ const RestaurantCard = ({ restaurant, navigate }) => (
                     <span className="flex items-center text-sm font-semibold text-gray-500">
                         ⭐ {restaurant.rating}
                     </span>
-                    <span className="text-xs text-gray-400">Popular</span>
+                    <span className="text-xs text-gray-400">Popularity</span>
                 </div>
                 <div className="flex flex-col">
                     <span className="text-gray-500 font-bold text-base">
@@ -113,6 +114,7 @@ const Home = () => {
                                 src={item.imageUrl} 
                                 alt={item.name} 
                                 className="w-full h-full object-cover"
+                                loading="lazy"
                                 onError={(e) => e.target.src = 'https://via.placeholder.com/128'}
                             />
                             <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/60 to-transparent">
